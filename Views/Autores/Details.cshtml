@@ -1,0 +1,26 @@
+@model Autor
+@{
+    ViewData["Title"] = "Detalhes do Autor";
+}
+
+<h1>Detalhes do Autor</h1>
+
+<dl>
+    <dt>Nome</dt>
+    <dd>@Model.Nome</dd>
+
+    <dt>Nacionalidade</dt>
+    <dd>@Model.Nacionalidade</dd>
+
+    <dt>Data de Nascimento</dt>
+    <dd>@Model.DataNascimento.ToString("dd/MM/yyyy")</dd>
+
+    <dt>Email</dt>
+    <dd>@Model.Email</dd>
+
+    <dt>Biografia</dt>
+    <dd>@Model.Biografia</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+<a asp-action="Index">Voltar à lista</a>

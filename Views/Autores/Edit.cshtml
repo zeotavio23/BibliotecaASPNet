@@ -1,0 +1,40 @@
+@model AutorViewModel
+@{
+    ViewData["Title"] = "Editar Autor";
+}
+
+<h1>Editar Autor</h1>
+
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" />
+        <span asp-validation-for="Nome"></span>
+    </div>
+    <div>
+        <label asp-for="Nacionalidade"></label>
+        <input asp-for="Nacionalidade" />
+        <span asp-validation-for="Nacionalidade"></span>
+    </div>
+    <div>
+        <label asp-for="DataNascimento"></label>
+        <input asp-for="DataNascimento" type="date" />
+        <span asp-validation-for="DataNascimento"></span>
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Biografia"></label>
+        <textarea asp-for="Biografia"></textarea>
+        <span asp-validation-for="Biografia"></span>
+    </div>
+
+    <button type="submit">Salvar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>

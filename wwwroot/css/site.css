@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #2980b9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #103152;
+    padding: 0;
+}
+
+header nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 14px 20px;
+}
+
+header nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 8px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+header nav a:hover {
+    background-color: #2980b9;
+}
+
+main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 20px 40px 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.mensagem-sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-top: 12px;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+table th {
+    background-color: #eef2f5;
+    color: #2c3e50;
+}
+
+table tr:hover {
+    background-color: #f8fafb;
+}
+
+table a {
+    color: #000000;
+    text-decoration: none;
+    margin-right: 4px;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    max-width: 480px;
+    margin-top: 12px;
+}
+
+form div {
+    margin-bottom: 14px;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #34495e;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccd3d9;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form input[type="checkbox"] {
+    width: auto;
+}
+
+form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.field-validation-error,
+.validation-summary-errors {
+    color: #c0392b;
+    font-size: 13px;
+}
+
+.validation-summary-errors ul {
+    margin: 6px 0;
+    padding-left: 18px;
+}
+
+button[type="submit"] {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #216894;
+}
+
+p a,
+main > p > a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+dl {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    max-width: 480px;
+}
+
+dl dt {
+    font-weight: 600;
+    color: #34495e;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-left: 0;
+    margin-bottom: 4px;
+}
+
+.busca-form {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    max-width: none;
+    margin-bottom: 16px;
+}
+
+.busca-form input {
+    padding: 8px 10px;
+    border: 1px solid #ccd3d9;
+    border-radius: 4px;
+}
+
+.busca-form button {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}

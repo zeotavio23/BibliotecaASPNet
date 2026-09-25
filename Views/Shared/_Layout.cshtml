@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BibliotecaASPNet</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a asp-controller="Autores" asp-action="Index">Autores</a> |
+            <a asp-controller="Livros" asp-action="Index">Livros</a> |
+            <a asp-controller="Emprestimos" asp-action="Index">Empréstimos</a>
+        </nav>
+    </header>
+    <main>
+        @if (TempData["MensagemSucesso"] != null)
+        {
+            <div class="mensagem-sucesso">@TempData["MensagemSucesso"]</div>
+        }
+        @RenderBody()
+    </main>
+</body>
+</html>

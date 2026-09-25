@@ -1,0 +1,45 @@
+@model IEnumerable<Livro>
+@{
+    ViewData["Title"] = "Livros";
+}
+
+<h1>Livros</h1>
+
+<p><a asp-action="Create">Novo Livro</a></p>
+
+<form asp-action="Index" method="get" class="busca-form">
+    <input type="text" name="titulo" value="@ViewBag.TituloPesquisado" placeholder="Buscar por título" />
+    <button type="submit">Buscar</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>ISBN</th>
+            <th>Ano</th>
+            <th>Gênero</th>
+            <th>Páginas</th>
+            <th>Autor</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var livro in Model)
+        {
+            <tr>
+                <td>@livro.Titulo</td>
+                <td>@livro.Isbn</td>
+                <td>@livro.AnoPublicacao</td>
+                <td>@livro.Genero</td>
+                <td>@livro.NumeroPaginas</td>
+                <td>@(livro.Autor?.Nome)</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@livro.Id">Detalhes</a> |
+                    <a asp-action="Edit" asp-route-id="@livro.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@livro.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,46 @@
+@model EmprestimoViewModel
+@{
+    ViewData["Title"] = "Novo Empréstimo";
+}
+
+<h1>Novo Empréstimo</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label asp-for="LivroId"></label>
+        <select asp-for="LivroId" asp-items="ViewBag.Livros">
+            <option value="">-- Selecione --</option>
+        </select>
+        <span asp-validation-for="LivroId"></span>
+    </div>
+    <div>
+        <label asp-for="NomeLeitor"></label>
+        <input asp-for="NomeLeitor" />
+        <span asp-validation-for="NomeLeitor"></span>
+    </div>
+    <div>
+        <label asp-for="DataEmprestimo"></label>
+        <input asp-for="DataEmprestimo" type="date" />
+        <span asp-validation-for="DataEmprestimo"></span>
+    </div>
+    <div>
+        <label asp-for="DataDevolucaoPrevista"></label>
+        <input asp-for="DataDevolucaoPrevista" type="date" />
+        <span asp-validation-for="DataDevolucaoPrevista"></span>
+    </div>
+    <div>
+        <label asp-for="DataDevolucaoReal"></label>
+        <input asp-for="DataDevolucaoReal" type="date" />
+        <span asp-validation-for="DataDevolucaoReal"></span>
+    </div>
+    <div>
+        <label asp-for="Devolvido"></label>
+        <input asp-for="Devolvido" type="checkbox" />
+        <span asp-validation-for="Devolvido"></span>
+    </div>
+
+    <button type="submit">Salvar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>

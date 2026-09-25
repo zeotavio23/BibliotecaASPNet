@@ -1,0 +1,47 @@
+@model LivroViewModel
+@{
+    ViewData["Title"] = "Editar Livro";
+}
+
+<h1>Editar Livro</h1>
+
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="Titulo"></label>
+        <input asp-for="Titulo" />
+        <span asp-validation-for="Titulo"></span>
+    </div>
+    <div>
+        <label asp-for="Isbn"></label>
+        <input asp-for="Isbn" />
+        <span asp-validation-for="Isbn"></span>
+    </div>
+    <div>
+        <label asp-for="AnoPublicacao"></label>
+        <input asp-for="AnoPublicacao" type="number" />
+        <span asp-validation-for="AnoPublicacao"></span>
+    </div>
+    <div>
+        <label asp-for="Genero"></label>
+        <input asp-for="Genero" />
+        <span asp-validation-for="Genero"></span>
+    </div>
+    <div>
+        <label asp-for="NumeroPaginas"></label>
+        <input asp-for="NumeroPaginas" type="number" />
+        <span asp-validation-for="NumeroPaginas"></span>
+    </div>
+    <div>
+        <label asp-for="AutorId"></label>
+        <select asp-for="AutorId" asp-items="ViewBag.Autores">
+            <option value="">-- Selecione --</option>
+        </select>
+        <span asp-validation-for="AutorId"></span>
+    </div>
+
+    <button type="submit">Salvar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>
